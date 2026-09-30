@@ -19,4 +19,4 @@ jobs:
       module_path: getting-started
       java_version: '17'
       query_suite: default
-      policy_mode: warn
+      policy_mode: block
