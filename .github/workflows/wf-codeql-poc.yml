@@ -13,7 +13,7 @@ permissions:
   actions: read
 jobs:
   codeql:
-    uses: DavidFaustino/ssdlc-codeql-poc/.github/workflows/codeql-reusable.yml@2ff7460c78385c2302bea6e310478baa8d2676bc
+    uses: DavidFaustino/ssdlc-codeql-poc/.github/workflows/codeql-reusable.yml@e44e1d97cd6ba43017233904e6c9b910a9e9cecd
     with:
       profile: java
       module_path: getting-started
