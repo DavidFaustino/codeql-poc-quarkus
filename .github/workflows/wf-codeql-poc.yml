@@ -1,0 +1,21 @@
+name: CodeQL SAST PoC Quarkus
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '23 5 * * 3'
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+jobs:
+  codeql:
+    uses: DavidFaustino/ssdlc-codeql-poc/.github/workflows/codeql-reusable.yml@2ff7460c78385c2302bea6e310478baa8d2676bc
+    with:
+      profile: java
+      module_path: getting-started
+      java_version: '17'
+      query_suite: default
